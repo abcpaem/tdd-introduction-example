@@ -1,5 +1,5 @@
 # Introduction to Test Driven Development (TDD)
-The purpose of this project is to show step by step how TDD is made with a simple example.
+The purpose of this project is to show step by step how TDD is made with a simple example in Java.
 
 **Note:** In order to see the whole process you will need to look at every commit made.
 
@@ -69,6 +69,21 @@ static Integer maxNumber(int[] array) {
         }
 
         return maxNumber;
+    }
+```
+
+**Output:**
+
+![checkNumberTestGreen](docs/checkMaxNumberTestGreen.PNG)
+
+### Exercise 1.3 Refactor the code
+Find a way to refactor the code in the maxNumber method to make it simple. Make sure the test is still Green after refactoring.
+
+**Solution:** There is a *max* method in *Arrays* class that can be used instead
+
+```
+static Integer maxNumber(int[] array) {
+        return Arrays.stream(array).max().getAsInt();
     }
 ```
 

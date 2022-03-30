@@ -1,15 +1,9 @@
 package com.techreturners;
 
+import java.util.Arrays;
+
 public class Math {
     static Integer maxNumber(int[] array) {
-        int maxNumber = array[0];
-
-        for (int i = 1; i < array.length; i++) {
-            if (array[i] > maxNumber) {
-                maxNumber = array[i];
-            }
-        }
-
-        return maxNumber;
+        return Arrays.stream(array).max().getAsInt();
     }
 }
