@@ -1,5 +1,5 @@
 # Introduction to Test Driven Development (TDD)
-The purpose of this project is to show step by step how TDD is made with a simple example in Java.
+The purpose of this project is to show step by step how TDD is done with a simple example in Java.
 
 ## Goal
 Create a function that returns the highest number in a given array using Test Driven Development.
