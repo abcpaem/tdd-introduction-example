@@ -29,4 +29,17 @@ public class MathTests {
         //Assert
         assertEquals(0, actual);
     }
+
+    @Test
+    public void checkMaxNumberWhenArrayIsEmpty()
+    {
+        //Arrange
+        int[] input = new int[]{};
+
+        //Act
+        Integer actual = Math.maxNumber(input);
+
+        //Assert
+        assertEquals(0, actual);
+    }
 }

@@ -91,6 +91,7 @@ static Integer maxNumber(int[] array) {
 
 ![checkMaxNumberTestGreen](docs/checkMaxNumberTestGreen.PNG)
 
+---
 ## Activity 2 - Add some tests for edge case scenarios
 
 ### Exercise 2.1 Add a test when input array is Null
@@ -137,3 +138,49 @@ static Integer maxNumber(int[] array) {
 **Output:**
 
 ![checkMaxNumberWhenArrayIsNullTestGreen](docs/checkMaxNumberWhenArrayIsNullTestGreen.PNG)
+
+---
+### Exercise 2.2 Add a test when input array is empty
+Add a test for the case when the input for the method *checkMaxNumber* is and empty array.
+
+#### Exercise 2.2.1 Create a failing test
+Create a failing test for the scenario in Exercise 2.2.
+
+**Solution:** The following test was added to *MathTests* class.
+
+```
+@Test
+public void checkMaxNumberWhenArrayIsEmpty()
+{
+    //Arrange
+    int[] input = new int[]{};
+
+    //Act
+    Integer actual = Math.maxNumber(input);
+
+    //Assert
+    assertEquals(0, actual);
+}
+```
+
+**Output:** Test is failing due to a no such element exception.
+
+```
+java.util.NoSuchElementException: No value present
+```
+
+#### Exercise 2.2.2 Pass the failing test
+Update the code to pass the failing test for the scenario in Exercise 2.2.
+
+**Solution:** A condition to check when the array is empty was added to the *maxNumber* method.
+
+```
+static Integer maxNumber(int[] array) {
+    if (array == null || array.length == 0) return 0;
+    return Arrays.stream(array).max().getAsInt();
+}
+```
+
+**Output:**
+
+![checkMaxNumberWhenArrayIsEmptyTestGreen](docs/checkMaxNumberWhenArrayIsEmptyTestGreen.PNG)
