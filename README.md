@@ -53,3 +53,25 @@ Expected :7
 Actual   :0
 ```
 
+### Exercise 1.2 Pass the failing test
+Add the code to pass (make it Green) the failing test in Exercise 1.1.
+
+**Solution:** The *maxNumber* method was updated to pass the test.
+
+```
+static Integer maxNumber(int[] array) {
+        int maxNumber = array[0];
+
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > maxNumber) {
+                maxNumber = array[i];
+            }
+        }
+
+        return maxNumber;
+    }
+```
+
+**Output:**
+
+![checkNumberTestGreen](docs/checkMaxNumberTestGreen.PNG)
