@@ -16,4 +16,17 @@ public class MathTests {
         //Assert
         assertEquals(9, actual);
     }
+
+    @Test
+    public void checkMaxNumberWhenArrayIsNull()
+    {
+        //Arrange
+        int[] input = null;
+
+        //Act
+        Integer actual = Math.maxNumber(input);
+
+        //Assert
+        assertEquals(0, actual);
+    }
 }

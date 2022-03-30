@@ -17,7 +17,7 @@ In the example below, 9 is the highest number in the array.
 - cd to the project root folder in the command line
 - ``mvn test``
 
-## Activity 1 Create first test
+## Activity 1 - Create first test
 Following the Red -> Green -> Refactor pattern, create your first test for the project requirements. 
 
 ### Exercise 1.1 Create a failing test
@@ -89,4 +89,51 @@ static Integer maxNumber(int[] array) {
 
 **Output:**
 
-![checkNumberTestGreen](docs/checkMaxNumberTestGreen.PNG)
+![checkMaxNumberTestGreen](docs/checkMaxNumberTestGreen.PNG)
+
+## Activity 2 - Add some tests for edge case scenarios
+
+### Exercise 2.1 Add a test when input array is Null
+Add a test for the case when the input for the method *checkMaxNumber* is null.
+
+#### Exercise 2.1.1 Create a failing test
+Create a failing test for the scenario in Exercise 2.1.  
+
+**Solution:** The following test was added to *MathTests* class.
+
+```
+@Test
+public void checkMaxNumberWhenArrayIsNull()
+{
+    //Arrange
+    int[] input = null;
+
+    //Act
+    Integer actual = Math.maxNumber(input);
+
+    //Assert
+    assertEquals(0, actual);
+}
+```
+
+**Output:** Test is failing due to a null pointer exception.
+
+```
+java.lang.NullPointerException: Cannot read the array length because "array" is null
+```
+
+#### Exercise 2.1.2 Pass the failing test
+Update the code to pass the failing test for the scenario in Exercise 2.1.
+
+**Solution:** A condition for checking null input was added to the *maxNumber* method. 
+
+```
+static Integer maxNumber(int[] array) {
+    if (array == null) return 0;
+    return Arrays.stream(array).max().getAsInt();
+}
+```
+
+**Output:**
+
+![checkMaxNumberWhenArrayIsNullTestGreen](docs/checkMaxNumberWhenArrayIsNullTestGreen.PNG)
