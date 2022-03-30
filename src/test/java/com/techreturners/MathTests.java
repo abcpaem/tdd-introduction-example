@@ -18,8 +18,7 @@ public class MathTests {
     }
 
     @Test
-    public void checkMaxNumberWhenArrayIsNull()
-    {
+    public void checkMaxNumberWhenArrayIsNull() {
         //Arrange
         int[] input = null;
 
@@ -31,8 +30,7 @@ public class MathTests {
     }
 
     @Test
-    public void checkMaxNumberWhenArrayIsEmpty()
-    {
+    public void checkMaxNumberWhenArrayIsEmpty() {
         //Arrange
         int[] input = new int[]{};
 
@@ -44,15 +42,26 @@ public class MathTests {
     }
 
     @Test
-    public void checkMaxNumberWhenAllNumbersAreTheSame()
-    {
+    public void checkMaxNumberWhenAllNumbersAreTheSame() {
         //Arrange
-        int[] input = new int[]{6,6,6,6};
+        int[] input = new int[]{6, 6, 6, 6};
 
         //Act
         Integer actual = Math.maxNumber(input);
 
         //Assert
         assertEquals(6, actual);
+    }
+
+    @Test
+    public void checkMaxNumberWhenThereAreNegativeNumbers() {
+        //Arrange
+        int[] input = new int[]{1, -1, 8, -5, 3};
+
+        //Act
+        Integer actual = Math.maxNumber(input);
+
+        //Assert
+        assertEquals(8, actual);
     }
 }

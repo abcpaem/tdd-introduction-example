@@ -211,6 +211,29 @@ public void checkMaxNumberWhenAllNumbersAreTheSame()
 
 ![checkMaxNumberWhenAllNumbersAreTheSameTestGreen](docs/checkMaxNumberWhenAllNumbersAreTheSameTestGreen.PNG)
 
+---
+### Exercise 2.4 Add a test when there are negative numbers in the array
+Add a test for the case when the input for the method *checkMaxNumber* is an array with negative numbers.
+
+**Solution:** The following test was added to *MathTests* class.
+
+```
+@Test
+public void checkMaxNumberWhenThereAreNegativeNumbers() {
+    //Arrange
+    int[] input = new int[]{1, -1, 8, -5, 3};
+
+    //Act
+    Integer actual = Math.maxNumber(input);
+
+    //Assert
+    assertEquals(8, actual);
+}
+```
+
+**Output:** Test is passing with current code
+
+![checkMaxNumberWhenThereAreNegativeNumbersTestGreen](docs/checkMaxNumberWhenThereAreNegativeNumbersTestGreen.PNG)
 
 ---
 ## Technology
