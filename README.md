@@ -141,7 +141,7 @@ static Integer maxNumber(int[] array) {
 
 ---
 ### Exercise 2.2 Add a test when input array is empty
-Add a test for the case when the input for the method *checkMaxNumber* is and empty array.
+Add a test for the case when the input for the method *checkMaxNumber* is an empty array.
 
 #### Exercise 2.2.1 Create a failing test
 Create a failing test for the scenario in Exercise 2.2.
@@ -184,3 +184,38 @@ static Integer maxNumber(int[] array) {
 **Output:**
 
 ![checkMaxNumberWhenArrayIsEmptyTestGreen](docs/checkMaxNumberWhenArrayIsEmptyTestGreen.PNG)
+
+
+---
+### Exercise 2.3 Add a test when all numbers in the array are the same
+Add a test for the case when the input for the method *checkMaxNumber* is an array with all the same numbers.
+
+**Solution:** The following test was added to *MathTests* class.
+
+```
+@Test
+public void checkMaxNumberWhenAllNumbersAreTheSame()
+{
+    //Arrange
+    int[] input = new int[]{6,6,6,6};
+
+    //Act
+    Integer actual = Math.maxNumber(input);
+
+    //Assert
+    assertEquals(6, actual);
+}
+```
+
+**Output:** Test is passing with current code
+
+![checkMaxNumberWhenAllNumbersAreTheSameTestGreen](docs/checkMaxNumberWhenAllNumbersAreTheSameTestGreen.PNG)
+
+
+---
+## Technology
+This project was built using:
+- Java version 17.0.2
+- JUnit 5.8.2 for unit testing
+- Apache Maven 3.8.5 as project manager
+- Community Edition for the IntelliJ 2021.3.2 development environment.

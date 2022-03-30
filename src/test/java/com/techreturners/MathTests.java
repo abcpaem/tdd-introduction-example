@@ -42,4 +42,17 @@ public class MathTests {
         //Assert
         assertEquals(0, actual);
     }
+
+    @Test
+    public void checkMaxNumberWhenAllNumbersAreTheSame()
+    {
+        //Arrange
+        int[] input = new int[]{6,6,6,6};
+
+        //Act
+        Integer actual = Math.maxNumber(input);
+
+        //Assert
+        assertEquals(6, actual);
+    }
 }
