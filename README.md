@@ -234,9 +234,21 @@ public void checkMaxNumberWhenThereAreNegativeNumbers() {
 ![checkMaxNumberWhenThereAreNegativeNumbersTestGreen](docs/checkMaxNumberWhenThereAreNegativeNumbersTestGreen.PNG)
 
 ---
+
+## Improvements
+
+All tests have been refactored as parameterized tests, so the previous tests results that looked like this:
+
+![Previous MathTests Passing](docs/MathTestsPassingOld.PNG)
+
+Now look like this:
+
+![MathTests Passing](docs/MathTestsPassing.PNG)
+
+---
 ## Technology
 This project was built using:
-- Java version 17.0.2
-- JUnit 5.8.2 for unit testing
-- Apache Maven 3.8.5 as project manager
-- Community Edition for the IntelliJ 2021.3.2 development environment.
+- Java 17.0.2
+- JUnit 5.8.2
+- Maven 3.8.5
+- IntelliJ 2021.3.2 (Community Edition).
